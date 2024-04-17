@@ -43,6 +43,9 @@ position = Vector2(41, 0)
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_vridu")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
 [connection signal="body_entered" from="TopPipe" to="." method="_on_body_entered"]
 [connection signal="body_entered" from="BottomPipe" to="." method="_on_body_entered"]
 [connection signal="body_entered" from="ClearArea" to="." method="_on_point_scored"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_2d_screen_exited"]

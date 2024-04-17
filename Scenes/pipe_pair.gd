@@ -1,6 +1,6 @@
 extends Node2D
 
-class_name pipe_pair
+class_name PipePair
 
 signal bird_hit
 signal point_awarded
@@ -11,10 +11,14 @@ func set_speed(new_speed):
 	speed = new_speed
 	
 func _process(delta):
-	position.x = speed * delta
+	position.x += speed * delta
 	
 func _on_body_entered(body):
 	bird_hit.emit()
 	
 func _on_point_scored(body):
 	point_awarded.emit()
+
+
+func _2d_screen_exited():
+	queue_free()
