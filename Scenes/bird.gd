@@ -1,20 +1,28 @@
 extends CharacterBody2D
 
 class_name Bird
-@export var gravity = 900.00
-@export var jump_force = 300.00
+@export var gravity = 900.0
+@export var jump_force = -300
 @export var rotation_speed = 2
 
 @onready var animation_player = $AnimationPlayer
 
+var is_started = false;
 var max_speed = 400
 
 func _ready():
 	velocity = Vector2.ZERO
+	animation_player.play("idle")
 	
 func _physics_process(delta):
 	if Input.is_action_just_pressed("Jump"):
+		if!is_started:
+			animation_player.play("flap_wings")
+			is_started = true
 		jump()
+	
+	if!is_started:
+		return
 	
 	velocity.y += gravity * delta
 	
