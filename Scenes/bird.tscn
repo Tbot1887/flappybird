@@ -54,7 +54,7 @@ script = ExtResource("1_u4mfa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_5x3td")
+texture = ExtResource("3_phpd0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708

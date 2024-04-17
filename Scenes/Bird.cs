@@ -7,7 +7,7 @@ public partial class Bird : CharacterBody2D
 	public float gravity = 900.00f;
 
 	[Export]
-	public float jump_force = 300.00f;
+	public float jump_force = -300.00f;
 
 	[Export]
 	public int rotation_speed = 2;
