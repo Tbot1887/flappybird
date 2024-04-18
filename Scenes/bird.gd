@@ -31,7 +31,7 @@ func _physics_process(delta):
 	
 	velocity.y += gravity * delta
 	
-#	velocity.y = min(velocity.y, max_speed)
+	#velocity.y = min(velocity.y, max_speed)
 	if velocity.y > max_speed:
 		velocity.y = max_speed
 	
