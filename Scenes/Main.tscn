@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1xviwswxcxj4"]
+[gd_scene load_steps=7 format=3 uid="uid://c1xviwswxcxj4"]
 
 [ext_resource type="Script" path="res://Scenes/GameManager.gd" id="1_jbord"]
 [ext_resource type="PackedScene" uid="uid://jaty3y1jhwju" path="res://Scenes/bird.tscn" id="1_ww5j3"]
 [ext_resource type="Texture2D" uid="uid://bwf5i0qyei8n0" path="res://Assets/background-day.png" id="2_6qpn5"]
 [ext_resource type="PackedScene" uid="uid://b62m2ugg61knj" path="res://Scenes/ground.tscn" id="3_0jcus"]
 [ext_resource type="PackedScene" uid="uid://txc801u3j4gx" path="res://Scenes/pipe_spawner.tscn" id="4_bfr1n"]
+[ext_resource type="PackedScene" uid="uid://cuelqcokb2qdk" path="res://Scenes/fade.tscn" id="6_ddjgy"]
 
 [node name="Node" type="Node"]
 
@@ -22,3 +23,5 @@ texture = ExtResource("2_6qpn5")
 position = Vector2(24, 200)
 
 [node name="Bird" parent="." instance=ExtResource("1_ww5j3")]
+
+[node name="Fade" parent="." instance=ExtResource("6_ddjgy")]
